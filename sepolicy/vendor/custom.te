@@ -137,13 +137,10 @@ allow su self:capability dac_override;
 allow su shell_data_file:dir { getattr search write };
 
 #============= system_server ==============
-allow system_server adsprpc_prop:file read;
 allow system_server bg_boot_complete_prop:file read;
 allow system_server bg_daemon_prop:file read;
 allow system_server bluetooth_prop:file read;
 allow system_server camera_prop:file read;
-allow system_server cnd_vendor_prop:file read;
-allow system_server console_silent_prop:file read;
 allow system_server ctl_LKCore_prop:file read;
 allow system_server ctl_bootanim_prop:file read;
 allow system_server init:binder { call transfer };
@@ -173,8 +170,6 @@ allow untrusted_app_27 bg_daemon_prop:file read;
 allow untrusted_app_27 bluetooth_prop:file read;
 allow untrusted_app_27 bootloader_boot_reason_prop:file read;
 allow untrusted_app_27 boottime_prop:file read;
-allow untrusted_app_27 cnd_vendor_prop:file read;
-allow untrusted_app_27 console_silent_prop:file read;
 allow untrusted_app_27 crash_dump:process noatsecure;
 allow untrusted_app_27 ctl_LKCore_prop:file read;
 allow untrusted_app_27 ctl_bootanim_prop:file read;
